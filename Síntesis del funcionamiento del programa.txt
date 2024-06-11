@@ -1,0 +1,17 @@
+Primero, el código incluye las librerías necesarias y utiliza el espacio de nombres std para simplificar el uso de funciones de la biblioteca estándar de C++. La inclusión de <iostream> permite realizar operaciones de entrada y salida, como cin y cout, mientras que <vector> proporciona la funcionalidad para usar vectores, que son estructuras de datos dinámicas. El uso de using namespace std evita la necesidad de prefijar estos elementos con std::, haciendo el código más legible.
+
+El siguiente bloque define una estructura llamada Producto, que contiene tres miembros: un entero id que representa el identificador único del producto, un string nombre que almacena el nombre del producto, y un float precio que guarda el precio del producto. Esta estructura permite almacenar información completa sobre un producto en una sola entidad.
+
+Se declara un vector global de tipo Producto llamado inventario, el cual se utilizará para almacenar todos los productos. Los vectores son contenedores que pueden crecer dinámicamente y se utilizan aquí para mantener una colección de productos.
+
+La función agregarProducto() se encarga de añadir nuevos productos al inventario. Primero, crea una instancia de Producto llamada nuevoProducto. Luego, solicita al usuario que ingrese el ID, nombre y precio del nuevo producto y almacena estos valores en nuevoProducto. Una vez recogidos estos datos, el producto se añade al vector inventario utilizando el método push_back(), y se notifica al usuario que el producto ha sido agregado exitosamente.
+
+La función eliminarProducto() permite eliminar un producto del inventario mediante su ID. Solicita al usuario que ingrese el ID del producto a eliminar y luego busca este ID en el vector inventario utilizando un iterador. Si encuentra el producto, lo elimina del vector con el método erase() y notifica al usuario que el producto ha sido eliminado. Si no encuentra el producto, informa al usuario que el producto no se encontró.
+
+La función verProductos() muestra todos los productos actualmente almacenados en el inventario. Recorre el vector inventario y para cada producto, imprime su ID, nombre y precio en la consola. Esta función permite al usuario ver una lista completa de los productos disponibles.
+
+La función modificarProducto() permite modificar los datos de un producto existente. Solicita al usuario que ingrese el ID del producto a modificar y luego busca este ID en el vector inventario. Si encuentra el producto, solicita al usuario que ingrese el nuevo nombre y precio del producto y actualiza estos valores. Luego, notifica al usuario que el producto ha sido modificado. Si no encuentra el producto, informa que no se encontró el producto.
+
+Finalmente, la función main() implementa un menú interactivo que permite al usuario seleccionar entre las diferentes opciones de gestión del inventario: agregar, eliminar, ver y modificar productos, o salir del programa. Utiliza un bucle do-while para mostrar el menú repetidamente hasta que el usuario elija la opción de salir (opción 5). Dependiendo de la opción seleccionada, se llama a la función correspondiente mediante una estructura switch-case.
+
+En síntesis, este programa permite al usuario gestionar un inventario de productos, ofreciendo funcionalidades para agregar, eliminar, ver y modificar productos a través de un menú interactivo. Utiliza una estructura struct para definir los productos y un vector para almacenarlos dinámicamente.
